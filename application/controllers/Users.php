@@ -1030,16 +1030,22 @@ class Users extends CI_Controller {
 					// 		redirect('users/sm');
 					// }
 
+						// untuk menghaus surat//
 				}elseif ($aksi == 'h') {
-
+					
 					if ($data['user']->row()->level == 's_admin') {
 							redirect('404_content');
 					}
 
-					$data['query'] = $this->db->get_where("tbl_sm", array('id_sm' => "$id", 'id_user' => "$id_user"))->row();
+					// $data['query'] = $this->db->get_where("tbl_sm", array('id_sm' => "$id", 'id_user' => "$id_user"))->row();
+					//data query = dapatkan kan data dimana tbl sm yang idnya = yang dilist yang dikirim dari tbl sm
+					$data['query'] = $this->db->get_where("tbl_sm", array('id_sm' => "$id"))->row();
 					$data['judul_web'] 	  = "Hapus Surat Masuk | Sistem Informasi Arsip Surat";
 
-					if ($data['query']->level != 'user') {
+					// if ($data['query']->level != 'user') {
+					if (false) {
+
+							
 							// $this->session->set_flashdata('msg',
 							// 	'
 							// 	<div class="alert alert-warning alert-dismissible" role="alert">
@@ -1056,7 +1062,6 @@ class Users extends CI_Controller {
 							$this->Mcrud->update_sm(array('id_sm' => "$id"), $data2);
 
 					}else {
-
 							$query_h = $this->db->get_where("tbl_lampiran", array('token_lampiran' => $data['query']->token_lampiran));
 							foreach ($query_h->result() as $baris) {
 								unlink('lampiran/'.$baris->nama_berkas);
@@ -1522,7 +1527,7 @@ class Users extends CI_Controller {
 							);
 							$this->Mcrud->update_sk(array('id_sk' => "$id"), $data2);
 					}else {
-
+							
 							$query_h = $this->db->get_where("tbl_lampiran", array('token_lampiran' => $data['query']->token_lampiran));
 							foreach ($query_h->result() as $baris) {
 								unlink('lampiran/'.$baris->nama_berkas);

@@ -77,8 +77,8 @@ if ($cek_ns->num_rows() == 0) {
                     <div class="form-group">
                       <label class="control-label col-lg-3">No. Surat</label>
                       <div class="col-lg-5">
-    												<input type="text" name="no_asalx" id="no_asalx" class="form-control" placeholder="" value="<?php echo $no_surat; ?>"  required readonly>
-                            <input type="hidden" name="no_asal" id="no_asal" class="form-control" placeholder="" value="<?php echo $no_surat; ?>" required>
+    												<input type="hidden" name="no_asalx" id="no_asalx" class="form-control" placeholder="" value="<?php echo $no_surat; ?>"  required readonly>
+                            <input type="text" name="no_asal" id="no_asal" class="form-control" placeholder="" value="" required>
     									</div>
                       <div class="col-lg-4">
                         <div class="input-group">

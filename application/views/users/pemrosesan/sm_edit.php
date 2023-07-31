@@ -52,7 +52,7 @@ $( function() {
                     <div class="form-group">
                       <label class="control-label col-lg-3">No. Surat</label>
                       <div class="col-lg-5">
-    												<input type="text" name="no_asal" id="no_asal" class="form-control" value="<?php echo $query->no_asal; ?>" placeholder="" required readonly>
+    												<input type="text" name="no_asal" id="no_asal" class="form-control" value="" placeholder="">
     									</div>
                       <div class="col-lg-4">
                         <div class="input-group">

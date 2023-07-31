@@ -61,8 +61,8 @@ if ($cek_ns->num_rows() == 0) {
                                 <option value="<?php echo $baris->no_surat; ?>"><?php echo $baris->no_surat; ?></option>
                             <?php endforeach; ?>
                           </select> -->
-                          <input type="text" name="nsx" id="nsx" class="form-control" placeholder="" value="<?php echo $no_surat; ?>" required readonly>
-                          <input type="hidden" name="ns" id="ns" class="form-control" placeholder="" value="<?php echo $no_surat; ?>" required>
+                          <input type="hidden" name="nsx" id="nsx" class="form-control" placeholder="" value="<?php echo $no_surat; ?>" required readonly>
+                          <input type="text" name="ns" id="ns" class="form-control" placeholder="" value="" required>
                         </div>
                       </div>
                       <div class="col-lg-4">
@@ -74,19 +74,19 @@ if ($cek_ns->num_rows() == 0) {
                     </div>
 
                     <div class="form-group">
-                      <label class="control-label col-lg-3">Bagian</label>
-                      <div class="col-lg-9">
+                      <!-- <label class="control-label col-lg-3">Bagian</label>
+                      <div class="col-lg-9"> -->
     												<!-- <input type="text" name="penerima" id="penerima" class="form-control" placeholder=""> -->
-                            <select class="form-control cari_bag" name="bagian">
+                            <!-- <select class="form-control cari_bag" name="bagian">
                               <option value="">- Pilih Bagian -</option>
                               <?php
                               foreach ($bagian as $baris) {?>
                                 <option value="<?php echo $baris->id_bagian; ?>"><?php echo $baris->nama_bagian; ?></option>
                               <?php
                               } ?>
-                            </select>
-    									</div>
-                    </div>
+                            </select> -->
+    									<!-- </div>
+                    </div> -->
 
                     <div class="form-group">
                       <label class="control-label col-lg-3">Perihal</label>
